@@ -11,17 +11,8 @@
       "conditions": [
             ["OS=='win'", {
                 "sources": [
-                    "src/win32/Controller.cpp",
-                    "src/win32/Watcher.cpp"
-                ],
-                "msvs_settings": {
-                    "VCCLCompilerTool": {
-                        "DisableSpecificWarnings": [ "4506", "4538", "4793" ]
-                    },
-                    "VCLinkerTool": {
-                        "AdditionalOptions": [ "/ignore:4248" ]
-                    }
-                }
+                    "src/win/addon.cpp"
+                ]
             }],
             ["OS=='mac'", {
                 "sources": [
