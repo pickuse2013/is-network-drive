@@ -2,7 +2,7 @@
   "name": "is-network-drive",
   "version": "0.0.1",
   "description": "test drive or path is network drive(SMB)",
-  "main": "addon.js",
+  "main": "main.js",
   "private": true,
   "dependencies": {
     "bindings": "~1.2.1",
@@ -16,13 +16,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://pickuse@bitbucket.org/pickuse/path-type-napi.git"
+    "url": "git+https://github.com/pickuse2013/is-network-drive.git"
   },
   "keywords": [
     "smb",
     "networkdrive"
   ],
   "author": "pickuse",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/pickuse/path-type-napi#readme"
+  "license": "MIT",
+  "homepage": "https://github.com/pickuse2013/is-network-drive#readme"
 }
