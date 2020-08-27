@@ -1,7 +1,7 @@
 {
-  "name": "path-type-napi",
+  "name": "is-network-drive",
   "version": "0.0.1",
-  "description": "",
+  "description": "test drive or path is network drive(SMB)",
   "main": "addon.js",
   "private": true,
   "dependencies": {
@@ -9,7 +9,20 @@
     "node-addon-api": "^1.0.0"
   },
   "scripts": {
-    "test": "node addon.js"
+    "test": "node addon.js",
+    "install": "node-gyp rebuild"
   },
-  "gypfile": true
+  "gypfile": true,
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://pickuse@bitbucket.org/pickuse/path-type-napi.git"
+  },
+  "keywords": [
+    "smb",
+    "networkdrive"
+  ],
+  "author": "pickuse",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/pickuse/path-type-napi#readme"
 }
