@@ -42,7 +42,7 @@ Napi::Value PathType(const Napi::CallbackInfo &info)
     UINT uDriveType = GetDriveType(filePath.c_str());
     switch (uDriveType)
     {
-    case DRIVE_UNKNOWN: //驅動器類型不確定
+    case DRIVE_UNKNOWN:  //驅動器類型不確定
         return Napi::String::New(env, "unknow");
         break;
     case DRIVE_NO_ROOT_DIR: //根目錄無效
