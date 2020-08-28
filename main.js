@@ -25,7 +25,7 @@ module.exports = (folderPath) => {
         
         // on windows they are only \\192.168.0.1 or Z:\ (mount) is network drive
         // test url is start with \\??????
-        if(RegExp('^\\\\$').test(folderPath))
+        if(RegExp('^\\\\').test(folderPath))
         {
             return true;
         }
