@@ -1,6 +1,6 @@
 {
   "name": "is-network-drive",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "test drive or path is network drive(SMB)",
   "main": "main.js",
   "dependencies": {

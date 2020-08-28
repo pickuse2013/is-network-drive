@@ -30,8 +30,8 @@ module.exports = (folderPath) => {
             return true;
         }
 
-        
-        if(addon.pathType(folderPath) == 3)
+        // winapi network-drive is 4
+        if(addon.pathType(folderPath) == 4)
         {
             return true;
         }
