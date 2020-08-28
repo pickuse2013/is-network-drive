@@ -21,14 +21,22 @@ npm install is-network-drive
 var isNetworkDrive = require("is-network-drive")
 ```
 it will return boolean, if path or drive is network device it will return TRUE, otherwise it will be FALSE.
+
 ### Mac
 ```
 isNetworkDrive("/Volumes/Library/SMB-Test")
 isNetworkDrive("/Users/pickuse/Project/test")
+isNetworkDrive("/Users/pickuse/Project/tttt")
+isNetworkDrive("/Volumes/Library/SMB-Test")
+isNetworkDrive("smb://192.168.0.124")
 ```
 
 ### Windows
 ```
-isNetworkDrive("C:/")
-isNetworkDrive("\\192.168.0.1\test")
+isNetworkDrive("C:\\Users\\Edward\\Desktop")
+isNetworkDrive("C:\\")
+isNetworkDrive("C://")
+isNetworkDrive("Z:\\SMB-Test")
+isNetworkDrive("Z://SMB-Test")
+isNetworkDrive('\\\\192.168.0.1\\test')
 ```
