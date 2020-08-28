@@ -4,7 +4,13 @@ var opsys = process.platform;
 module.exports = (folderPath) => {
     // check is system is mac osx
     if (opsys == "darwin") {
-        return addon.pathType(folderPath) == "smbfs";
+        // prevent like smb://192.168.0.1/
+        if(RegExp('^smb:\/\/\S+$').test(folderPath))
+        {
+            return true;
+        }
+
+        return  addon.pathType(folderPath) == "smbfs";
     }
 
     // check is system is windows
