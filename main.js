@@ -30,7 +30,13 @@ module.exports = (folderPath) => {
             return true;
         }
 
-        return addon.pathType(folderPath) == "network-drive";
+        
+        if(addon.pathType(folderPath) == 3)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     // check is system is linux

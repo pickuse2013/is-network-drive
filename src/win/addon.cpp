@@ -35,36 +35,26 @@ Napi::Value PathType(const Napi::CallbackInfo &info)
     std::string filePath = info[0].As<Napi::String>().ToString();
 
     //獲取驅動器的物理類型  該函數返回驅動器類型
-    UINT uDriveType = GetDriveType(filePath.c_str());
+    UINT uDriveType = GetDriveTypeA(filePath.c_str());
+    return Napi::Number::New(env, uDriveType);
+    /*
     switch (uDriveType)
     {
-    case DRIVE_UNKNOWN:  //驅動器類型不確定
-        return Napi::String::New(env, "unknow");
-        break;
-    case DRIVE_NO_ROOT_DIR: //根目錄無效
-        return Napi::String::New(env, "fail");
-        break;
-    case DRIVE_REMOVABLE: //可移動設備， 比如U盤
-        return Napi::String::New(env, "removable");
-        break;
-    case DRIVE_FIXED: //固定的驅動;例如,一個硬盤或閃存驅動器
-        return Napi::String::New(env, "fixed");
-        break;
-    case DRIVE_REMOTE: //遠程(網絡)驅動器
-        return Napi::String::New(env, "network-drive");
-        break;
-    case DRIVE_CDROM: //cd - rom驅動器
-        return Napi::String::New(env, "cdrom");
-        break;
-    case DRIVE_RAMDISK: //RAM磁盤
-        return Napi::String::New(env, "ramdisk");
-        break;
-    default:
-        return Napi::String::New(env, "unknow");
-        break;
-    }
-
-    return Napi::String::New(env, "unknow");
+        case 0:  //驅動器類型不確定
+            return Napi::String::New(env, "unknow");
+        case 1: //根目錄無效
+            return Napi::String::New(env, "fail");
+        case 2: //可移動設備， 比如U盤
+            return Napi::String::New(env, "removable");
+        case 3: //固定的驅動;例如,一個硬盤或閃存驅動器
+            return Napi::String::New(env, "fixed");
+        case 4: //遠程(網絡)驅動器
+            return Napi::String::New(env, "network-drive");
+        case 5: //cd - rom驅動器
+            return Napi::String::New(env, "cdrom");
+        case 6: //RAM磁盤
+            return Napi::String::New(env, "ramdisk");
+    }*/
 }
 
 Napi::Object Init(Napi::Env env, Napi::Object exports)
