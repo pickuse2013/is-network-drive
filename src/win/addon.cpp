@@ -34,10 +34,6 @@ Napi::Value PathType(const Napi::CallbackInfo &info)
 
     std::string filePath = info[0].As<Napi::String>().ToString();
 
-    //string to LPCWSTR
-    //std::wstring stemp = s2ws(filePath);
-    //LPCWSTR result = stemp.c_str();
-
     //獲取驅動器的物理類型  該函數返回驅動器類型
     UINT uDriveType = GetDriveType(filePath.c_str());
     switch (uDriveType)
@@ -67,6 +63,8 @@ Napi::Value PathType(const Napi::CallbackInfo &info)
         return Napi::String::New(env, "unknow");
         break;
     }
+
+    return Napi::String::New(env, "unknow");
 }
 
 Napi::Object Init(Napi::Env env, Napi::Object exports)

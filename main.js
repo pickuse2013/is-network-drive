@@ -17,10 +17,10 @@ module.exports = (folderPath) => {
     if (opsys == "win32" || opsys == "win64") {
 
         // windows api only take like c:\
-        if (RegExp('^([a-z]):').test(folderPath)) {
+        if (RegExp('^([a-zA-Z]):').test(folderPath)) {
 
             // take c:\ only
-            folderPath = folderPath.slice(0, 2)
+            folderPath = folderPath.slice(0, 3)
         }
         
         // on windows they are only \\192.168.0.1 or Z:\ (mount) is network drive
