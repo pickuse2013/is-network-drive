@@ -10,7 +10,11 @@ module.exports = (folderPath) => {
             return true;
         }
 
-        return addon.pathType(folderPath) == "smbfs";
+        let fileType = addon.pathType(folderPath);
+
+        if (fileType == "smbfs" || fileType == "afpfs" || fileType == "nfs") {
+            return true;
+        }
     }
 
     // check is system is windows

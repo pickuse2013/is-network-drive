@@ -32,7 +32,7 @@ Napi::Value PathType(const Napi::CallbackInfo &info)
         return Napi::String::New(env, "fail");
     }
 
-    return Napi::String::New(env, "dsdsds");
+    return Napi::String::New(env, "fail");
 }
 
 Napi::Object Init(Napi::Env env, Napi::Object exports)
